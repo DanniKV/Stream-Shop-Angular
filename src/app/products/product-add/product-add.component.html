@@ -1,0 +1,35 @@
+<form [formGroup]="productForm" (ngSubmit)="addProduct()">
+
+  <label>
+    Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Description:
+    <input type="text" formControlName="description">
+  </label>
+
+  <label>
+    Price:
+    <input type="text" formControlName="price">
+  </label>
+
+  <label>
+    Category:
+    <input type="text" formControlName="category">
+  </label>
+
+  <label>
+    Stock:
+    <input type="text" formControlName="stock">
+  </label>
+
+  <label>
+    PicUrl:
+    <input type="text" formControlName="picUrl">
+  </label>
+
+
+  <button mat-raised-button color="primary" type="submit">SaveProduct</button>
+</form>
