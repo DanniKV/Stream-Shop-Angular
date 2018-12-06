@@ -1,4 +1,4 @@
-import {Products} from '../models/products';
+import {Product} from '../models/product';
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
@@ -8,7 +8,8 @@ import {Observable} from 'rxjs';
 })
 
 export class ProductService {
-  apiUrl = 'https://streamboss.azurewebsites.net/api/product';
+  apiUrl = 'https://streamboss.azurewebsites.net/api/product/';
+  //apiUrl = 'http://localhost:64357/api/product/'; //Postman Port
 
 
   constructor(private http: HttpClient) {
@@ -16,19 +17,19 @@ export class ProductService {
   }
   //Crud Operations!
 
-  getProducts(): Observable<Products[]> {
-    return this.http.get<Products[]>(this.apiUrl);
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl);
   }
-  addProduct(product: Products): Observable<Products> {
-    return this.http.post<Products>(this.apiUrl, product);
+  addProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.apiUrl, product);
   }
-  updateProduct(product: Products): Observable<Products> {
-    return this.http.put<Products>(this.apiUrl + '/' + product.id, product)
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.put<Product>(this.apiUrl  + product.id, product)
   }
-  getProductById(id: number): Observable<Products> {
-    return this.http.get<Products>(this.apiUrl + '/' + id)
+  getProductById(id: number): Observable<Product> {
+    return this.http.get<Product>(this.apiUrl + id)
   }
-  deleteProduct(id: number): Observable<Products> {
-    return this.http.delete(this.apiUrl + '/' + id)
+  deleteProduct(id: number): Observable<Product> {
+    return this.http.delete(this.apiUrl + id)
   }
 }

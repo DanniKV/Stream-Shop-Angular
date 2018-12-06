@@ -1,8 +1,8 @@
-export class Products {
+export class Product {
   id: number;
   name: string;
   description: string;
-  Price: number;
+  price: number;
   category: string;
   stock: number;
   picUrl: string;

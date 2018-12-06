@@ -19,12 +19,17 @@ export class ProductAddComponent implements OnInit {
   });
 
   constructor(private productService: ProductService,
-              private router: Router) { }
-
-  ngOnInit() {
-    const product = this.productForm.value;
-    this.productService.addProduct(product).subscribe(product => {
-    })
+              private router: Router) {
   }
 
+  ngOnInit() {
+  }
+
+  addProduct() {
+    const product = this.productForm.value;
+    this.productService.addProduct(product)
+      .subscribe(product => {
+      //this.router.navigateByUrl("/product")
+    });
+  }
 }
