@@ -21,18 +21,20 @@ export class ProductService {
     debugger;
     return this.http.post<Product>(this.apiUrl, product);
   }
-  /*
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl);
-  }
-  updateProduct(product: Product): Observable<Product> {
-    return this.http.put<Product>(this.apiUrl  + product.id, product)
-  }
   getProductById(id: number): Observable<Product> {
     return this.http.get<Product>(this.apiUrl + id)
   }
+
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl);
+  }
+
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.put<Product>(this.apiUrl  + product.id, product)
+  }
+
   deleteProduct(id: number): Observable<Product> {
     return this.http.delete(this.apiUrl + id)
   }
-  **/
+
 }
