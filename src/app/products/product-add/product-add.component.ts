@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ProductService} from '../../shared/services/product.service';
+//import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @Component({
   selector: 'app-product-add',
@@ -26,7 +27,9 @@ export class ProductAddComponent implements OnInit {
   }
 
   addProduct() {
+    debugger;
     const product = this.productForm.value;
+    debugger;
     this.productService.addProduct(product)
       .subscribe(product => {
       //this.router.navigateByUrl("/product")

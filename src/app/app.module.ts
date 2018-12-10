@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 //import { ModelsComponent } from './shared/models/models.component';
-import { ServicesComponent } from './shared/services/services.component';
+//import { ServicesComponent } from './shared/services/services.component';
 import { GuardComponent } from './shared/guard/guard.component';
 //import { WelcomeComponent } from './app/welcome/welcome.component';
 import { ProductAddComponent } from './products/product-add/product-add.component';
@@ -19,7 +19,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     NavbarComponent,
-    ServicesComponent,
     GuardComponent,
     ProductAddComponent,
     ProductDetailsComponent,
